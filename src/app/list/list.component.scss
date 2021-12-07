@@ -1,0 +1,23 @@
+.toDoList{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+}
+
+li button{
+    margin-left: 10px;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+li:hover{
+    color:blue;
+}
+
+span.completed:hover{
+    color: red;
+}

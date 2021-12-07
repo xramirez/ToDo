@@ -1,0 +1,17 @@
+<div class="toDoList">
+    <h1>{{name}}'s To Do List</h1>
+
+    <label for="todo">Enter a To Do item:</label>
+    <input type="text" #todo (keyup.enter)="addItem(todo.value)">
+    <button (click)="addItem(todo.value)">Create</button>
+    <p>My List Items</p>
+    <ul>
+        <li *ngFor="let item of list; let i=index">
+            <span [style.display]="item.show? 'inline': 'none'" (click)="select(i)"
+                [ngClass]="item.completed ? 'completed' : ''">{{item.todo}}</span>
+            <input type="text" [style.display]="item.show? 'none': 'inline'" value="{{item.todo}}" #newdo
+                (keyup.enter)="edit(i, newdo.value)">
+            <button (click)="edit(i, newdo.value)">Edit</button>
+        </li>
+    </ul>
+</div>

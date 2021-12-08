@@ -4,10 +4,25 @@
     flex-direction: column;
     align-items: center;
     font-size: large;
+    font-family: arial;
+    border: 1px solid lightgray;
+}
+
+h1{
+    font-family: Verdana;
+}
+
+li{
+    width: 250px;
+    background-color: rgba(30, 100, 130, 0.7)
+}
+li:nth-child(even){
+    background-color: rgba(30, 100, 130, 0.8)
 }
 
 li button{
     margin-left: 10px;
+    float: right;
 }
 
 .completed{
@@ -15,9 +30,9 @@ li button{
 }
 
 li:hover{
-    color:blue;
+    color:navy;
 }
 
 span.completed:hover{
-    color: red;
+    color: crimson;
 }
